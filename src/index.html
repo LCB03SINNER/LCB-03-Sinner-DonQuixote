@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serum Web Browser</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="browser-shell">
+      <div class="toolbar">
+        <div class="toolbar-group left">
+          <button class="toolbar-button" id="backBtn" title="Back">←</button>
+          <button class="toolbar-button" id="forwardBtn" title="Forward">→</button>
+          <button class="toolbar-button" id="reloadBtn" title="Reload">↻</button>
+        </div>
+
+        <div class="address-bar-wrap">
+          <input id="addressBar" class="address-bar" type="text" value="https://www.google.com" spellcheck="false" />
+          <button id="goBtn" class="go-button">Go</button>
+        </div>
+
+        <div class="toolbar-group right">
+          <button class="toolbar-button" id="newTabBtn" title="New Tab">＋</button>
+          <button class="toolbar-button" id="settingsBtn" title="Settings">⚙</button>
+        </div>
+      </div>
+
+      <div class="tabs-bar" id="tabsBar"></div>
+
+      <webview id="browserView" src="https://www.google.com" autosize="on"></webview>
+
+      <div class="status-bar">
+        <span id="statusText">Ready</span>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

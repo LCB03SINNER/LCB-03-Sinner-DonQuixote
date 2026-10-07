@@ -1,0 +1,27 @@
+{
+  "name": "serum-web-browser",
+  "version": "1.0.0",
+  "description": "Serum Web Browser - a custom Electron-based browser shell",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --remote-debugging-port=9222",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.1"
+  },
+  "build": {
+    "appId": "com.serum.webbrowser",
+    "productName": "Serum Web Browser",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*"
+    ]
+  }
+}
